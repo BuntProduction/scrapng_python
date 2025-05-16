@@ -16,8 +16,8 @@ def scrape_amazon_webcam_titles(base_url, max_titles=100, max_pages=5):
         "Accept-Language": "fr-FR,fr;q=0.9",
         "Connection": "keep-alive",
         "DNT": "1",
-        "Upgrade-Insecure-Requests": "1",
-        "Referer": "https://www.google.com/"
+        "Upgrade-Insecure-Requests": "1", # apparemment pour forcer l'https
+        "Referer": "https://www.google.com/" # pour ajouter le point d'entrée sur le site
     }
 
     titles = []
@@ -65,7 +65,7 @@ def export_titles_to_csv(titles, filepath="data/custom_products.csv"):
 
     with open(filepath, mode="w", encoding="utf-8", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow(["title"])  # En-tête
+        writer.writerow(["Scraping Webcams amazon (avec le title)"])  # En-tête
         for title in titles:
             writer.writerow([title])
 

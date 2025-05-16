@@ -47,7 +47,11 @@ def main():
     print(summary)
     '''
 
-    # Scraping de webcams sur Amazon (titres uniquement)
+
+#############################
+## Scraping de webcams sur Amazon (titres uniquement)
+#############################
+
     amazon_url = "https://www.amazon.fr/s?k=webcam"
     max_titles = 300
     max_pages = 6
