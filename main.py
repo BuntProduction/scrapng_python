@@ -53,8 +53,8 @@ def main():
 #############################
 
     amazon_url = "https://www.amazon.fr/s?k=webcam"
-    max_titles = 300
-    max_pages = 6
+    max_titles = 1000
+    max_pages = 20
 
     webcam_titles = scrape_amazon_webcam_titles(amazon_url, max_titles=max_titles, max_pages=max_pages)
 
