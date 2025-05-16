@@ -15,6 +15,7 @@ from analysis.stats import (
 from scraper.scraper_custom import scrape_amazon_webcam_titles, export_titles_to_csv
 
 def main():
+    '''
     # Scraping des livres
     scraper = BookScraper()
     print("Lancement du scraping des livres...")
@@ -44,11 +45,12 @@ def main():
     summary = summary_by_cluster(df_books)
     print("\nRésumé statistique par cluster :")
     print(summary)
+    '''
 
     # Scraping de webcams sur Amazon (titres uniquement)
     amazon_url = "https://www.amazon.fr/s?k=webcam"
-    max_titles = 150
-    max_pages = 4
+    max_titles = 300
+    max_pages = 6
 
     webcam_titles = scrape_amazon_webcam_titles(amazon_url, max_titles=max_titles, max_pages=max_pages)
 
